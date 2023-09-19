@@ -1,12 +1,13 @@
-# ESPN NBA Season Leaders Scraper
+# ESPN NBA Season Leaders Scraper with Data Validation Pipelines
 
-This Scrapy spider scrapes data from ESPN's NBA season leaders page and extracts player statistics.
+This Scrapy spider scrapes data from ESPN's NBA season leaders page and extracts player statistics. It includes data validation pipelines.
 
 ## Overview
 
 - The spider starts from the [ESPN NBA Season Leaders](https://www.espn.com/nba/seasonleaders/_/league/nba) page.
 - It collects data for the top-performing NBA players during the season.
 - The spider retrieves player data such as rank, player name, team, games played, minutes per game, field goal percentage, free throw percentage, three-point field goals made, rebounds per game, assists per game, steals per game, blocks per game, turnovers per game, points per game, and ESPN rating.
+
 
 ## Prerequisites
 
@@ -31,6 +32,9 @@ This command will run the spider and save the scraped data to a CSV file named e
 ## Output
 
 The spider generates a CSV file (espn_nba_season_leaders.csv) containing player statistics. The CSV file includes columns for each player's rank, name, team, and various performance metrics.
+
+## Item Pipeline
+The spider uses item pipelines to validate and clean the scraped data. The pipeline ensures that the extracted data conforms to the expected data types before saving it.
 
 ## Contributing
 
